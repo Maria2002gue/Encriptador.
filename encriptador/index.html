@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Encriptador</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onLoad="scroll();">
+  <div class="content">
+    <h2 class="encriptador_title">Encriptador</h2>
+    <div class="content-areas">
+      <div class="letter">
+        <img src="./images/alura.png" alt="alura" />
+      </div>
+
+      <div class="area1">
+        <textarea
+          name="mensaje1"
+          id="mensaje1"
+          class="textarea-enc"
+          rows="10"
+          cols="50"
+          placeholder="Escribe aquí tu mensaje"
+        ></textarea>
+
+        <div class="alert-div">
+          <img src="./images/aviso.png" alt="alert" class="alert-img" />
+          <input
+            type="text"
+            class="input-alert-message"
+            value="Solo letras minúsculas y sin acentos"
+            readonly
+          />
+        </div>
+
+        <div class="btn-content">
+          <button
+            name="encriptar"
+            onclick="encriptar()"
+            class="btn-encriptar"
+          >
+            Encriptar
+          </button>
+          <button
+            name="recibir"
+            onclick="desencriptar()"
+            class="btn-desencriptar"
+          >
+            Desencriptar
+          </button>
+        </div>
+      </div>
+
+      <div class="area2">
+        <textarea
+          name="mensaje2"
+          id="mensaje2"
+          class="textarea-dec no-visible"
+          rows="10"
+          cols="50"
+          readonly
+          placeholder="Aquí se verá tu mensaje encriptado/desencriptado"
+        ></textarea>
+        <div class="textarea-background" id="textarea-background-id">
+          <img
+            src="./images/lupa.png"
+            alt="image-lupa"
+            name="image-lupa"
+            class="image-lupa"
+          />
+          <h1 class="text-center" style="display: block">
+            Ningún mensaje fue encontrado
+          </h1>
+          <h3 class="text-center2" style="display: block">
+            Ingrese el texto que desee encriptar o desencriptar.
+          </h3>
+        </div>
+
+          <div class="btn-copy-class">
+            <button
+              name="copiar"
+              id="copiar"
+              onclick="copiarAlPortapapeles()"
+              class="btn-copy"
+              style="display: none"
+            >
+              Copiar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
